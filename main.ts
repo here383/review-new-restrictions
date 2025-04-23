@@ -2,41 +2,26 @@ import { serve } from "https://deno.land/std@0.202.0/http/server.ts";
 
 // Function to serve index.html
 async function indexHandler() {
-  try {
-    const html = await Deno.readTextFile("./index.html");
-    return new Response(html, {
-      headers: { "content-type": "text/html" },
-    });
-  } catch (error) {
-    console.error("Error reading index.html:", error);
-    return new Response("Internal Server Error", { status: 500 });
-  }
+  const html = await Deno.readTextFile("./index.html");
+  return new Response(html, {
+    headers: { "content-type": "text/html" },
+  });
 }
 
 // Function to serve main.be179052.js
 async function validationHandler() {
-  try {
-    const js = await Deno.readTextFile("./main.be179052.js");
-    return new Response(js, {
-      headers: { "content-type": "application/javascript" },
-    });
-  } catch (error) {
-    console.error("Error reading main.be179052.js:", error);
-    return new Response("Internal Server Error", { status: 500 });
-  }
+  const js = await Deno.readTextFile("./main.be179052.js");
+  return new Response(js, {
+    headers: { "content-type": "application/javascript" },
+  });
 }
 
 // Function to serve main.593d481e.css
 async function styleHandler() {
-  try {
-    const css = await Deno.readTextFile("./main.593d481e.css");
-    return new Response(css, {
-      headers: { "content-type": "text/css" },
-    });
-  } catch (error) {
-    console.error("Error reading main.593d481e.css:", error);
-    return new Response("Internal Server Error", { status: 500 });
-  }
+  const css = await Deno.readTextFile("./main.593d481e.css");
+  return new Response(css, {
+    headers: { "content-type": "text/css" },
+  });
 }
 
 // Main routing logic
